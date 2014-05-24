@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <!--Imports-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js\angular.js"></script>
+    <script src="js\bootstrap.js"></script>
+    <link rel="stylesheet" href="css\bootstrap.css">
+    <link rel="stylesheet" href="css\bootstrap-theme.css">
+    <!--Imports-->
+
+
+
+    <link rel="stylesheet" href="css\general.css">
+    <script src="js\general.js"></script>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body ng-controller="AngCtrl">
+    <h2>Bar</h2>
+    <div>
+
+        <span ng-repeat="item in items">
+            {{item.name}} | R$ {{item.price}} <br>
+        </span>
+
+
+        <br>
+        <br>
+        <br>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+
+                Drink | <input type="text" class="form-control" ng-model="drinkName" placeholder="Insert you drink here"> <br>
+                Price | <input type="text" class="form-control" ng-model="drinkPrice" placeholder="Insert the price here"> <br>
+
+            </div>
+            <button  ng-click="add()" type="button" class="btn btn-lg btn-primary">Send order!</button>
+        </form>
+    </div>
+
+</body>
+</html>
